@@ -1,6 +1,7 @@
 using System;
 
 using Dalamud.Game;
+using Dalamud.Game.ClientState.Objects.SubKinds;
 using Dalamud.Game.Command;
 using Dalamud.Interface.Windowing;
 using Dalamud.Plugin;
@@ -79,7 +80,8 @@ public sealed class XIVComboExpandedPlugin : IDalamudPlugin
     {
         if (Service.Configuration.AutoJobChange)
         {
-            string job = Service.ClientState.LocalPlayer?.ClassJob.RowId != null ? CustomComboInfoAttribute.JobIDToName((byte)Service.ClientState.LocalPlayer?.ClassJob.RowId) : Service.Configuration.CurrentJobTab;
+            var localPlayer = Service.ObjectTable[0] as IPlayerCharacter;
+            string job = localPlayer?.ClassJob.RowId != null ? CustomComboInfoAttribute.JobIDToName((byte)localPlayer?.ClassJob.RowId) : Service.Configuration.CurrentJobTab;
             if (job == "Disciples of the Hand" || Service.Configuration.CurrentJobTab == "Disciples of the Hand")
                 job = "Adventurer";
             Service.Configuration.CurrentJobTab = job;
@@ -191,7 +193,8 @@ public sealed class XIVComboExpandedPlugin : IDalamudPlugin
 
                 if (Service.Configuration.AutoJobChange)
                 {
-                    string job = Service.ClientState.LocalPlayer?.ClassJob.RowId != null ? CustomComboInfoAttribute.JobIDToName((byte)Service.ClientState.LocalPlayer?.ClassJob.RowId) : Service.Configuration.CurrentJobTab;
+                    var localPlayer = Service.ObjectTable[0] as IPlayerCharacter;
+                    string job = localPlayer?.ClassJob.RowId != null ? CustomComboInfoAttribute.JobIDToName((byte)localPlayer?.ClassJob.RowId) : Service.Configuration.CurrentJobTab;
                     if (job == "Disciples of the Hand" || Service.Configuration.CurrentJobTab == "Disciples of the Hand")
                         job = "Adventurer";
                     Service.Configuration.CurrentJobTab = job;

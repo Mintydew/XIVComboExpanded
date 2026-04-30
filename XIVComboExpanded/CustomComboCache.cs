@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using Dalamud.Game;
 using Dalamud.Game.ClientState.JobGauge.Types;
+using Dalamud.Game.ClientState.Objects.SubKinds;
 using Dalamud.Game.ClientState.Objects.Types;
 using Dalamud.Game.ClientState.Statuses;
 using Dalamud.Plugin.Services;
@@ -111,12 +112,12 @@ internal partial class CustomComboCache : IDisposable
     /// <returns>Max number of charges at current and max level.</returns>
     internal unsafe (ushort Current, ushort Max) GetMaxCharges(uint actionID)
     {
-        var player = Service.ClientState.LocalPlayer;
+        var player = Service.ObjectTable[0] as IPlayerCharacter;
         if (player == null)
             return (0, 0);
 
-        var job = player.ClassJob.RowId;
-        var level = player.Level;
+        var job = (uint)player.ClassJob.RowId;
+        var level = (byte)player.Level;
         if (job == 0 || level == 0)
             return (0, 0);
 
