@@ -12,8 +12,8 @@
         "DalamudApiLevel": 15,
         "Tags": ["combo", "xivcombo", "expanded", "pcombo"],
         "LoadPriority": 0,
-        "DownloadLinkInstall": "https://github.com/Mintydew/XIVComboExpanded/release/latest.zip",
-        "DownloadLinkUpdate": "https://github.com/Mintydew/XIVComboExpanded/release/latest.zip",
+        "DownloadLinkInstall": "https://github.com/Mintydew/XIVComboExpanded/raw/master/release/latest.zip",
+        "DownloadLinkUpdate": "https://github.com/Mintydew/XIVComboExpanded/raw/master/release/latest.zip",
         "IsHide": false,
         "IsTestingExclusive": false
     }
