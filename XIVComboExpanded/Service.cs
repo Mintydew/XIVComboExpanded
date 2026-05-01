@@ -113,4 +113,16 @@ internal class Service
     /// </summary>
     [PluginService]
     internal static IPluginLog PluginLog { get; private set; } = null!;
+
+    /// <summary>
+    /// Gets the Dalamud player state.
+    /// </summary>
+    [PluginService]
+    internal static IPlayerState PlayerState { get; private set; } = null!;    
+
+    /// <summary>
+    /// This collection represents the currently spawned FFXIV game objects
+    /// </summary>
+    [PluginService]
+    internal static IObjectTable ObjectTable { get; private set; } = null!;        
 }

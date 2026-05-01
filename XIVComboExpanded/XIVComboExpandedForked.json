@@ -1,11 +1,11 @@
 {
-    "Author": "attick, daemitus, Khayle",
-    "Name": "XIV Combo Expanded",
+    "Author": "attick, daemitus, Khayle, Minty",
+    "Name": "XIV Combo Expanded Forked",
     "Punchline": "Condenses combos and mutually exclusive abilities onto a single button.",
     "Description": "This plugin condenses combos and mutually exclusive abilities onto a single button. For example, a 1-2-3 combo would become 1-1-1.",
     "RepoUrl": "https://github.com/daemitus/XIVComboPlugin",
     "IconUrl": "https://raw.githubusercontent.com/daemitus/XIVComboPlugin/master/res/icon.png",
     "ImageUrls": [],
-    "DalamudApiLevel": 14,
+    "DalamudApiLevel": 15,
     "Tags": ["combo", "xivcombo", "expanded", "pcombo"]
 }
