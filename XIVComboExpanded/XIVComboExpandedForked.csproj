@@ -6,7 +6,7 @@
     <Version>1.0.0.0</Version>
     <Description>This plugin condenses combos and mutually exclusive abilities onto a single button. This is just a personal use fork for learning</Description>
     <Copyright>Copyleft attick 2020 baybeeee</Copyright>
-    <PackageProjectUrl>https://github.com/daemitus/XIVComboPlugin</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/Mintydew/XIVComboExpanded</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -36,7 +36,7 @@
       $(AssemblySearchPaths);
       $(DalamudLibPath);
     </AssemblySearchPaths>
-    <AssemblyName>XIVComboExpanded</AssemblyName>
+    <AssemblyName>XIVComboExpandedForked</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
